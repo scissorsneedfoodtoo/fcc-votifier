@@ -1,7 +1,8 @@
 import decode from 'jwt-decode';
-import { createHashHistory } from 'history'
 import auth0 from 'auth0-js';
-const browserHistory = createHashHistory()
+import history from '../history';
+
+const browserHistory = history;
 const ID_TOKEN_KEY = 'id_token';
 const ACCESS_TOKEN_KEY = 'access_token';
 
@@ -28,7 +29,8 @@ export function login() {
 export function logout() {
   clearIdToken();
   clearAccessToken();
-  browserHistory.push('/');
+  // navigate to the home route
+  browserHistory.replace('/');
 }
 
 export function requireAuth(nextState, replace) {

@@ -16,13 +16,11 @@ const authCheck = jwt({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        // YOUR-AUTH0-DOMAIN name e.g https://prosper.auth0.com
-        jwksUri: 'https://' + process.env.REACT_APP_DOMAIN + '/.well-known/jwks.json'
-    }),
-    // This is the identifier we set when we created the API
-    audience: process.env.REACT_APP_AUDIENCE,
-    issuer: process.env.REACT_APP_DOMAIN,
-    algorithms: ['RS256']
+        jwksUri: "https://fcc-votifier.auth0.com/.well-known/jwks.json"
+  }),
+  audience: process.env.REACT_APP_AUDIENCE,
+  issuer: "https://fcc-votifier.auth0.com/",
+  algorithms: ['RS256']
 });
 
 app.get('/api/jokes/food', (req, res) => {
