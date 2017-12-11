@@ -7,6 +7,8 @@ import { Router, Route, Switch } from 'react-router';
 // import { BrowserRouter } from 'react-router-dom'; // for use when we have a server with dynamic requests -- usually preferable
 import { createHashHistory } from 'history'
 import registerServiceWorker from './registerServiceWorker';
+import Callback from './components/Callback';
+import { requireAuth } from './utils/AuthService';
 // require('dotenv').config();
 
 const history = createHashHistory()
@@ -17,7 +19,8 @@ const Root = () => {
       <Router history={history}>
         <Switch>
           <Route exact path="/" component={FoodJokes}/>
-          <Route path="/special" component={CelebrityJokes}/>
+          <Route path="/special" component={CelebrityJokes} onEnter={requireAuth}/>
+          <Route path="/callback" component={Callback} />
         </Switch>
       </Router>
     </div>

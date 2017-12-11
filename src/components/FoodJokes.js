@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Nav from './Nav';
+import { isLoggedIn } from '../utils/AuthService';
 import { getFoodData } from '../utils/chucknorris-api';
 
 
@@ -45,18 +46,14 @@ class FoodJokes extends Component {
               </div>
           ))}
 
-        <div className="col-sm-12">
-          <div className="jumbotron text-center">
-            <h2>Get Access to Celebrity Jokes By Logging In</h2>
-          </div>
-        </div>
-
-        <div className="col-sm-12">
+          <div className="col-sm-12">
+            { isLoggedIn() ?
             <div className="jumbotron text-center">
               <h2>View Celebrity Jokes</h2>
               <Link className="btn btn-lg btn-success" to='/special'> Celebrity Jokes </Link>
-            </div>
-        </div>
+            </div> : <div className="jumbotron text-center"><h2>Get Access to Celebrity Jokes By Logging In</h2></div>
+            }
+          </div>
       </div>
     );
   }
