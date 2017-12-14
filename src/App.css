@@ -31,3 +31,7 @@
 .log {
   margin: 5px 10px 0 0;
 }
+
+.dropdown-menu {
+  padding: 10px;
+}
