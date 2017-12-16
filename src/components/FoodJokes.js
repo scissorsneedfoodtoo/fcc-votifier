@@ -28,7 +28,7 @@ class FoodJokes extends Component {
     const { jokes }  = this.state;
 
     return (
-      <main className="container">
+      <main className="container-fluid">
         <Nav />
         <h2 className="text-center">Recent Polls</h2>
         <hr/>
