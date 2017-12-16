@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CelebrityJokes from './components/CelebrityJokes';
 import FoodJokes from './components/FoodJokes';
+import Footer from './components/Footer';
 import { Router, Route, Switch } from 'react-router-dom';
-// import { HashRouter } from 'react-router-dom'; // for static sites with known files as in the tutorial
-// import { BrowserRouter } from 'react-router-dom'; // for use when we have a server with dynamic requests -- usually preferable
 import history from './history'
 import registerServiceWorker from './registerServiceWorker';
 import Callback from './components/Callback';
@@ -20,6 +19,7 @@ const Root = () => {
           <Route path="/callback" component={Callback} />
         </Switch>
       </Router>
+      <Footer />
     </div>
   )
 }

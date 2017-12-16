@@ -26,7 +26,7 @@ class CelebrityJokes extends Component {
     const { jokes } = this.state;
 
     return (
-      <div>
+      <main className="container">
         <Nav />
         <h3 className="text-center">Privileged Chuck Norris Celebrity Jokes</h3>
         <hr/>
@@ -50,7 +50,7 @@ class CelebrityJokes extends Component {
             <Link className="btn btn-lg btn-success" to='/'>Chuck Norris Food Jokes </Link>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 }
