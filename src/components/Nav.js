@@ -9,31 +9,36 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-default">
-        <div className="navbar-header">
-          <Link className="navbar-brand" to="/">freeCodeCamp Votifier</Link>
-        </div>
-        <ul className="nav navbar-nav navbar-right">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            {
-             ( isLoggedIn() ) ? <Link to="/special">My Polls</Link> :  ''
-            }
+      <Navbar collapseOnSelect>
+        <Navbar.Header>
+          <Navbar.Brand>
+            <Link to="/">freeCodeCamp Votifier</Link>
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <ul className="nav navbar-nav navbar-right">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              {
+               ( isLoggedIn() ) ? <Link to="/special">My Polls</Link> :  ''
+              }
 
-          </li>
-          <li>
-            {
-             ( isLoggedIn() ) ? <Link to="/special">New Poll</Link> :  ''
-            }
+            </li>
+            <li>
+              {
+               ( isLoggedIn() ) ? <Link to="/special">New Poll</Link> :  ''
+              }
 
-          </li>
-          {
-            (isLoggedIn()) ? ( <NavDropdown title="User Name" id="nav-dropdown"><button className="btn btn-danger log btn-block" onClick={() => logout()}>Log out</button></NavDropdown> ) : ( <li><button className="btn btn-info log" onClick={() => login()}>Log In</button></li> )
-          }
-        </ul>
-      </nav>
+            </li>
+            {
+              (isLoggedIn()) ? ( <NavDropdown title="User Name" id="nav-dropdown"><button className="btn btn-danger log btn-block" onClick={() => logout()}>Log out</button></NavDropdown> ) : ( <li><button className="btn btn-info log" onClick={() => login()}>Log In</button></li> )
+            }
+          </ul>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
