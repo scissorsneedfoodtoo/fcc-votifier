@@ -34,7 +34,7 @@ class Nav extends Component {
 
             </li>
             {
-              (isLoggedIn()) ? ( <NavDropdown title="User Name" id="nav-dropdown"><button className="btn btn-danger log btn-block" onClick={() => logout()}>Log out</button></NavDropdown> ) : ( <li><button className="btn btn-info log" onClick={() => login()}>Log In</button></li> )
+              (isLoggedIn()) ? ( <NavDropdown title="User Name" id="nav-dropdown"><button className="btn btn-danger log btn-block" onClick={() => logout()}>Log out</button></NavDropdown> ) : ( <li className="login-btn-wrapper"><button className="btn btn-info log btn-block" onClick={() => login()}>Log In</button></li> )
             }
           </ul>
         </Navbar.Collapse>

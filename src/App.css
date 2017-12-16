@@ -17,12 +17,16 @@
   font-size: large;
 }
 
-.navbar-right {
+/*.navbar-right {
   margin-right: 0px !important;
-}
+}*/
 
-.log {
+/*.log {
   margin: 8px 10px 0 0;
+}*/
+
+.login-btn-wrapper {
+  padding: 10px;
 }
 
 .dropdown-menu {
