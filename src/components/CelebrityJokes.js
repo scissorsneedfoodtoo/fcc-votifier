@@ -26,7 +26,7 @@ class CelebrityJokes extends Component {
     const { jokes } = this.state;
 
     return (
-      <main className="container">
+      <main className="container-fluid">
         <Nav />
         <h3 className="text-center">Privileged Chuck Norris Celebrity Jokes</h3>
         <hr/>

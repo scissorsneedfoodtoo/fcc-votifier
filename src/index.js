@@ -11,7 +11,7 @@ import { requireAuth } from './utils/AuthService';
 
 const Root = () => {
   return (
-    <div className="container-fluid">
+    <div>
       <Router history={history}>
         <Switch>
           <Route exact path="/" component={FoodJokes}/>

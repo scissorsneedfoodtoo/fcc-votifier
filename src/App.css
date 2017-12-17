@@ -17,14 +17,6 @@
   font-size: large;
 }
 
-/*.navbar-right {
-  margin-right: 0px !important;
-}*/
-
-/*.log {
-  margin: 8px 10px 0 0;
-}*/
-
 .login-btn-wrapper {
   padding: 10px;
 }
@@ -39,7 +31,7 @@ main.container-fluid {
 }
 
 .footer {
-  position: absolute;
+  /*position: absolute;*/
   bottom: 0;
   height: 60px; /* Set the fixed height of the footer here */
   line-height: 60px; /* Vertically center the text there */
