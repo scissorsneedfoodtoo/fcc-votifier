@@ -6,7 +6,7 @@ import { isLoggedIn } from '../utils/AuthService';
 import { getFoodData } from '../utils/chucknorris-api';
 
 
-class FoodJokes extends Component {
+class HomePage extends Component {
 
   constructor() {
     super()
@@ -28,7 +28,7 @@ class FoodJokes extends Component {
     const { jokes }  = this.state;
 
     return (
-      <main className="container-fluid">
+      <main className="container-fluid main-content">
         <Nav />
         <h2 className="text-center">Recent Polls</h2>
         <hr/>
@@ -50,4 +50,4 @@ class FoodJokes extends Component {
   }
 }
 
-export default FoodJokes;
+export default HomePage;

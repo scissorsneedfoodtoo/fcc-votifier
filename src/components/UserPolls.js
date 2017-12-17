@@ -4,7 +4,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Nav from './Nav';
 import { getCelebrityData } from '../utils/chucknorris-api';
 
-class CelebrityJokes extends Component {
+class UserPolls extends Component {
 
   constructor() {
     super();
@@ -26,7 +26,7 @@ class CelebrityJokes extends Component {
     const { jokes } = this.state;
 
     return (
-      <main className="container-fluid">
+      <main className="container-fluid main-content">
         <Nav />
         <h3 className="text-center">Privileged Chuck Norris Celebrity Jokes</h3>
         <hr/>
@@ -43,16 +43,9 @@ class CelebrityJokes extends Component {
                 </div>
               </div>
           ))}
-
-        <div className="col-sm-12">
-          <div className="jumbotron text-center">
-            <h2>View Food Jokes</h2>
-            <Link className="btn btn-lg btn-success" to='/'>Chuck Norris Food Jokes </Link>
-          </div>
-        </div>
       </main>
     );
   }
 }
 
-export default CelebrityJokes;
+export default UserPolls;
