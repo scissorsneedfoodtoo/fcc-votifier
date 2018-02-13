@@ -13,10 +13,15 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"
   },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "server": "cd server && nodemon server.js",
+    "start": "concurrently --kill-others-on-fail \"react-scripts start\" \"yarn server\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "proxy": "https://localhost:3333/"
   }
 }
