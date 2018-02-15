@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+// import ReactDOM from 'react-dom';
+// import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Nav from './Nav';
-import { isLoggedIn } from '../utils/AuthService';
+// import { isLoggedIn } from '../utils/AuthService';
 import { getFoodData } from '../utils/chucknorris-api';
 
 

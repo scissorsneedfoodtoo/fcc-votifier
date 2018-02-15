@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
+// import ReactDOM from 'react-dom';
+// import { BrowserRouter, Link, Route } from 'react-router-dom';
 
 class Footer extends Component {
 
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
 
   render() {
 
