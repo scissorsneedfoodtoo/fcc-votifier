@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
-// import { BrowserRouter, Link, Route, render } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { login, logout, isLoggedIn } from '../utils/AuthService';
-// import { Navbar, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
 import { Navbar, NavDropdown } from 'react-bootstrap';
 import '../App.css';
 
